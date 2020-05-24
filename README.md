@@ -3,6 +3,12 @@ Python Logging with Colored Arguments
 
 [<img src="https://miro.medium.com/max/700/1*ZaOru_rZsnfNCQaPJ5D60g.png">]()
 
+A Python 3 logging formatter that will highlight each argument in the logging format string
+with a different alternating color.  
+Logging directives are written in the Python 3.2+ brace-format
+instead of the legacy `%s` / `%d` / .. format that is traditionally accepted by Python logger.
+
+
 Bootstrapping code:
 ```python
 import logging
@@ -31,5 +37,5 @@ logger.critical("this is a {} message", logging.getLevelName(logging.CRITICAL))
 logger.info("Does old-style formatting also work? %s it is, but no colors (yet)", True)
 ```
 
-See my [Medium Story](https://medium.com/@davidoha/python-logging-colorize-your-arguments-41567a754ac?source=friends_link&sk=ef35bfb7ec017d58e358ebc99fe26bdf). 
+See my [Medium Story](https://medium.com/@davidoha/python-logging-colorize-your-arguments-41567a754ac?source=friends_link&sk=ef35bfb7ec017d58e358ebc99fe26bdf) for more information. 
 
