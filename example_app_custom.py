@@ -10,6 +10,7 @@ def init_logging():
     root_logger = logging.getLogger()
     root_logger.setLevel(logging.DEBUG)
 
+    # replace the default logger with ColorizedArgsFormatter
     console_level = "DEBUG"
     console_handler = logging.StreamHandler(stream=sys.stdout)
     console_handler.setLevel(console_level)
@@ -18,6 +19,8 @@ def init_logging():
     console_handler.setFormatter(colored_formatter)
     root_logger.addHandler(console_handler)
 
+    # if we use file handler, we must use BraceFormatStyleFormatter, so that our brace-style formatting
+    # will be understood by the logger
     file_handler = logging.FileHandler("app.log")
     file_level = "DEBUG"
     file_handler.setLevel(file_level)
