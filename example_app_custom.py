@@ -26,6 +26,13 @@ def init_logging():
     root_logger.addHandler(file_handler)
 
 
+# add aan additional alternating color
+ColorizedArgsFormatter.arg_colors.append(ColorCodes.blue)
+
+# map debug message color to different han the default gray
+# should be done before logging initialization
+ColorizedArgsFormatter.level_to_color[logging.DEBUG] = "\u001b[45m"
+
 init_logging()
 logger = logging.getLogger(__name__)
 logger.info("Hello World")
@@ -39,10 +46,3 @@ logger.error("this is a {} message", logging.getLevelName(logging.ERROR))
 logger.critical("this is a {} message", logging.getLevelName(logging.CRITICAL))
 logger.info("Does old-style formatting also work? %s it is, but no colors (yet)", True)
 
-# add aan additional alternating color
-ColorizedArgsFormatter.arg_colors.append(ColorCodes.blue)
-logger.info("My favorite drinks are {}, {}, {}, {}", "milk", "wine", "tea", "beer")
-
-# change log level color mapping
-ColorizedArgsFormatter.level_to_color[logging.DEBUG] = "\x1b[1;39m"
-logger.debug("this is a {} message with different color", logging.getLevelName(logging.DEBUG))

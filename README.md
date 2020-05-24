@@ -3,7 +3,7 @@ Python Logging with Colored Arguments
 
 [<img src="https://miro.medium.com/max/700/1*ZaOru_rZsnfNCQaPJ5D60g.png">]()
 
-A Python 3 logging formatter that will highlight each argument in the logging format string
+A Python 3 logging formatter that highlights each argument in the logging format string
 with a different alternating color.  
 Logging directives are written in the Python 3.2+ brace-format
 instead of the legacy `%s` / `%d` / .. format that is traditionally accepted by Python logger.
