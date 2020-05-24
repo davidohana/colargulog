@@ -1,7 +1,7 @@
 # colargulog
 Python Logging with Colored Arguments
 
-<img src="https://miro.medium.com/max/700/1*ZaOru_rZsnfNCQaPJ5D60g.png">
+<img src="https://miro.medium.com/max/1400/1*ZaOru_rZsnfNCQaPJ5D60g.png">
 
 A Python 3 logging formatter that highlights each argument in the logging format string
 with a different alternating color.  
