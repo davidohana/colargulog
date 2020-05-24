@@ -41,6 +41,18 @@ See my [Medium Story](https://medium.com/@davidoha/python-logging-colorize-your-
 
 
 Customization with different color mapping and additional alternating color:
+
+```python
+# add an additional alternating color
+ColorizedArgsFormatter.arg_colors.append(ColorCodes.blue)
+
+# map debug message color to different han the default gray
+# should be done before logging initialization
+ColorizedArgsFormatter.level_to_color[logging.DEBUG] = "\u001b[45m"
+
+# now init the logger and log as usual
+```
+
 <img src="https://miro.medium.com/max/1400/1*bWzogOG0_V597SKjFnAF7A.png">
  
 ### License: 

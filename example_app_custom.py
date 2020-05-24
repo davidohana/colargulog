@@ -29,7 +29,7 @@ def init_logging():
     root_logger.addHandler(file_handler)
 
 
-# add aan additional alternating color
+# add an additional alternating color
 ColorizedArgsFormatter.arg_colors.append(ColorCodes.blue)
 
 # map debug message color to different han the default gray
