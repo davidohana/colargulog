@@ -39,3 +39,6 @@ logger.info("Does old-style formatting also work? %s it is, but no colors (yet)"
 
 See my [Medium Story](https://medium.com/@davidoha/python-logging-colorize-your-arguments-41567a754ac?source=friends_link&sk=ef35bfb7ec017d58e358ebc99fe26bdf) for more information. 
 
+ 
+### License: 
+Apache-2.0
