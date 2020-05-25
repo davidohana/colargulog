@@ -81,6 +81,8 @@ class ColorizedArgsFormatter(logging.Formatter):
         formatter = self.level_to_formatter.get(record.levelno)
         self.rewrite_record(record)
         formatted = formatter.format(record)
+
+        # restore log record to original state for other handlers
         record.msg = orig_msg
         record.args = orig_args
         return formatted
